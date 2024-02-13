@@ -14,7 +14,7 @@ import Message from '../../../public/assets/sidenav/Message.png';
 export const items = [
   {
     title: 'Dashboard',
-    path: '/customers',
+    path: '/dashboard',
     icon: (
       <SvgIcon fontSize="small">
         <ChartBarIcon />

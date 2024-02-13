@@ -15,3 +15,50 @@
 .login-form .MuiFilledInput-underline , .signup-form .MuiFilledInput-underline {
     border-color: #A5A8BE;
 }
+
+.scrollcard-section{
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 19px 21px ;
+    overflow: auto;
+    display: flex;
+}
+.scrollcard{
+    width:  218px;
+    height:  100px;
+    top: 1px;
+    gap: 10px;
+    /* background: #FFFCF4; */
+    justify-content: space-around;
+    margin: 0 20px 0 0 !important;
+    display: flex;
+    padding: 20px;
+}
+.scrollcard .icon {
+    display: flex;
+}
+.scrollcard .icon svg{
+    margin: auto 0;
+}
+.scrollcard .content p{
+    margin: 0;
+}
+.scrollcard .content{
+margin: auto 0;
+}
+
+.scrollcard .content .subheading{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+.scrollcard .content .heading{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: #000000;
+}
