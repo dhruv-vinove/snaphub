@@ -26,6 +26,7 @@ export const SideNav = (props) => {
   const content = (
     <Scrollbar
       sx={{
+        background:"#1e1e1e !important",
         height: '100%',
         '& .simplebar-content': {
           height: '100%'

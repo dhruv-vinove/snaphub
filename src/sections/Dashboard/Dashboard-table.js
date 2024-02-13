@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import {
   Avatar,
   Box,
+  Button,
   Card,
   Checkbox,
   Stack,
@@ -16,6 +17,8 @@ import {
 } from '@mui/material';
 import { Scrollbar } from 'src/components/scrollbar';
 import { getInitials } from 'src/utils/get-initials';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 export const DashboardTable = (props) => {
   const {
@@ -39,7 +42,7 @@ export const DashboardTable = (props) => {
     <Card>
       <Scrollbar>
         <Box sx={{ minWidth: 800 }}>
-          <Table>
+          <Table className='dashboardtable'>
             <TableHead>
               <TableRow>
                 {/* <TableCell padding="checkbox">
@@ -76,57 +79,91 @@ export const DashboardTable = (props) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {items.map((customer) => {
-                const isSelected = selected.includes(customer.id);
-                const createdAt = format(customer.createdAt|| new Date(), 'dd/MM/yyyy');
+              {items.map((dashboard) => {
+                const isSelected = selected.includes(dashboard.id);
+                // const createdAt = format(dashboard.createdAt|| new Date(), 'dd/MM/yyyy');
+                const keys=Object.keys(dashboard);
+                console.log(keys);
+                return(
+                <TableRow
 
-                return (
-                  <TableRow
-                    hover
-                    key={customer.id}
-                    selected={isSelected}
-                  >
-                    <TableCell padding="checkbox">
-                      <Checkbox
-                        checked={isSelected}
-                        onChange={(event) => {
-                          if (event.target.checked) {
-                            onSelectOne?.(customer.id);
-                          } else {
-                            onDeselectOne?.(customer.id);
-                          }
-                        }}
-                      />
-                    </TableCell>
+                hover
+                key={dashboard.id}
+                selected={isSelected}
+              >
+                {keys.map((k)=>{
+                  console.log(dashboard[k]);
+                  return(
                     <TableCell>
-                      <Stack
-                        alignItems="center"
-                        direction="row"
-                        spacing={2}
-                      >
-                        <Avatar src={customer.avatar}>
-                          {getInitials(customer.name)}
-                        </Avatar>
-                        <Typography variant="subtitle2">
-                          {customer.name}
-                        </Typography>
-                      </Stack>
-                    </TableCell>
-                    <TableCell>
-                      {customer.email}
-                    </TableCell>
-                    <TableCell>
-                      {customer.address.city}, {customer.address.state}, {customer.address.country}
-                    </TableCell>
-                    <TableCell>
-                      {customer.phone}
-                    </TableCell>
-                    <TableCell>
-                      {createdAt}
-                    </TableCell>
-                  </TableRow>
-                );
-              })}
+                    {dashboard[k]}
+
+                  </TableCell>
+                  )
+                })}
+                <TableCell>
+                  <div className='table-action-div' style={{display:"flex",justifyContent:"center" }}>
+                    <Button className='view'><FontAwesomeIcon icon={faEye} /></Button>
+                    <Button className='edit'><FontAwesomeIcon icon={faPencil} /></Button>
+                    <Button className='delete'><FontAwesomeIcon icon={faTrashCan} /></Button>
+                  </div>
+                </TableCell>
+                </TableRow>
+);
+                // return (
+                //   <TableRow
+
+                //     hover
+                //     key={dashboard.id}
+                //     selected={isSelected}
+                //   >
+                //     <TableCell padding="checkbox">
+                //       <Checkbox
+                //         checked={isSelected}
+                //         onChange={(event) => {
+                //           if (event.target.checked) {
+                //             onSelectOne?.(dashboard.id);
+                //           } else {
+                //             onDeselectOne?.(dashboard.id);
+                //           }
+                //         }}
+                //       />
+                //     </TableCell>
+                //     <TableCell>
+                //       <Stack
+                //         alignItems="center"
+                //         direction="row"
+                //         spacing={2}
+                //       >
+                //         <Avatar src={dashboard.avatar}>
+                //           {getInitials(dashboard.name)}
+                //         </Avatar>
+                //         <Typography variant="subtitle2">
+                //           {dashboard.name}
+                //         </Typography>
+                //       </Stack>
+                //     </TableCell>
+                //     <TableCell>
+                //       {dashboard.sno}
+                //     </TableCell>
+                //     <TableCell>
+                //       {dashboard.document_date}
+                //     </TableCell>
+                //     <TableCell>
+                //       {dashboard.submission_date}
+                //     </TableCell>
+                //     <TableCell>
+                //       {dashboard.amount}
+                //     </TableCell>
+                //     <TableCell>
+                //       {dashboard.vender_name}
+                //     </TableCell>
+                //     <TableCell>
+                //       {createdAt}
+                //     </TableCell>
+                //   </TableRow>
+                // );
+              }             
+              )}
             </TableBody>
           </Table>
         </Box>

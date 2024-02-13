@@ -62,3 +62,100 @@ margin: auto 0;
     text-align: left;
     color: #000000;
 }
+.dashboardtable thead tr{
+    background: #1E1E1E !important;
+
+}
+.dashboardtable th{ 
+    font-size: 14px !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    min-height: 43PX !important;
+    text-align: center;
+    /* border-radius: 8px; */
+}
+.dashboardtable th:nth-child(1){
+    border-bottom-left-radius: 8px;
+} 
+.dashboardtable th:last-child{
+    border-bottom-right-radius: 8px;
+} 
+.dashboardtable td{ 
+    font-size: 14px !important;
+    color: #2C2C2C;
+    text-align: center;
+}
+.dashboardtable tbody tr:nth-child(even) {
+    background: #f8f4fc;
+}
+.btn-purple{
+    background: #F6F8FF !important;
+    color: #2C2C2C !important;
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+}
+
+.scrollcard-section .MuiPaper-rounded{
+    border-radius: 8px !important;
+}
+.profilecompletestatus {
+    margin-bottom: 16px;
+    margin-top: 9px;
+}
+.profilecompletestatus .status{
+    /* max-width: 869.5px; */
+    height: 51px;
+    top: 103px;
+    left: 264.5px;
+    border-radius: 9px;
+    border: 1px solid #F8C134;
+    background: #FFFCF4;
+    width: 69%;
+}
+.profilecompletestatus .profileimg{
+    width: 35.5px;
+    height: 35.5px;
+    top: 8.25px;
+    left: 10.25px;
+    border: 2px solid #EEB623;
+    border-radius: 100%;
+    margin: auto 7px auto 11px;
+}
+.Setpassword-btn{
+    /* max-width: 263.5px; */
+    height: 51px;
+    border-radius: 9px;
+    border: 1px solid #369CCF !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    color: #369CCF !important;
+    width: 30%;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    background: #F3FDFF !important;
+}
+.table-action-div button:hover{
+    background-color: transparent !important;
+}
+.table-action-div button.view:hover svg{
+    color: rgb(103, 103, 243) !important;
+    border: 1px solid rgb(103, 103, 243) !important;
+
+}
+.table-action-div button.edit:hover svg{
+    color: rgb(99, 180, 99) !important;
+    border: 1px solid rgb(99, 180, 99) !important;
+
+}
+.table-action-div button.delete:hover svg{
+    color: rgb(252, 59, 59) !important;
+    border: 1px solid rgb(252, 59, 59) !important;
+
+}
+.table-action-div button svg {
+        color: #B6B7BB;
+        border: 1px solid #B6B7BB;
+        border-radius: 100%;
+        padding: 8px;
+       
+}
