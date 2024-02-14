@@ -21,6 +21,15 @@ export const items = [
       </SvgIcon>
     )
   },
+  {
+    title: 'Manage Document',
+    path: '/managedocument',
+    icon: (
+      <SvgIcon fontSize="small">
+        <ChartBarIcon />
+      </SvgIcon>
+    )
+  },
   // {
   //   title: 'Manage Document',
   //   path: '/',
