@@ -240,7 +240,7 @@ const Page = () => {
           flexGrow: 1,
           pt: 5,
           pb: 8,
-          backgroundColor: "#f8f4fc",
+          backgroundColor: "#f5f7ff",
         }}
       >
         <Container maxWidth="xxl">

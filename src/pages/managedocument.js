@@ -10,6 +10,7 @@ import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 import { applyPagination } from "src/utils/apply-pagination";
 import { ManageDocumentTable } from "src/sections/managedocument/managedocument-table";
 import { ManageDocumentSearch } from "src/sections/managedocument/managedocument-search";
+import { height } from "@mui/system";
 const now = new Date();
 
 const data = [
@@ -238,7 +239,7 @@ const Page = () => {
           flexGrow: 1,
           pt: 5,
           pb: 8,
-          backgroundColor: "#f8f4fc",
+          backgroundColor: "#f5f7ff",
         }}
       >
         <Container maxWidth="xxl">
@@ -279,8 +280,10 @@ const Page = () => {
           </Stack> */}
           <Stack spacing={3}>
             <Stack direction="row" justifyContent="space-between" spacing={4}>
-              <Stack spacing={1}>
+              <Stack spacing={1} sx={{width:"100%"}}>
                 <Box sx={{ display: "flex" }}>
+                  <Box sx={{ display: "flex" }}>
+
                   <svg
                     style={{ marginTop: "auto", marginBottom: "auto", marginRight: "8px" }}
                     xmlns="http://www.w3.org/2000/svg"
@@ -307,35 +310,51 @@ const Page = () => {
                     />
                   </svg>
 
-                  <Typography variant="h4" sx={{ fontSize: "19px",my:"auto" }}>
+                  <Typography variant="h4" sx={{ fontSize: "19px",my:"auto",fontWeight:"400 !important" }}>
                     Dashboard
                   </Typography>
+                  </Box>
                 <Stack
+                sx={{width:"100%"}}
                   alignItems="center"
                   direction="row"
                   spacing={1}
                 >
                   <ManageDocumentSearch />
-
+                  <Box sx={{display:"flex",gap:"10px",height:"40px"}}>
+                    <div style={{display:"grid"}}>
+                      <label style={{fontSize:"13px"}}>Start Date</label>
+                      <input type="date"></input>
+                    </div>
+                    <div style={{display:"grid"}}>
+                      <label style={{fontSize:"13px"}}>End Date</label>
+                      <input type="date"></input>
+                    </div>
+                  </Box>
                   <Button
+                  className="btn-white"
                     color="inherit"
-                    startIcon={(
-                      <SvgIcon fontSize="small">
-                        <ArrowUpOnSquareIcon />
-                      </SvgIcon>
-                    )}
+                    // startIcon={(
+                    //   <SvgIcon fontSize="small">
+                    //     <ArrowUpOnSquareIcon />
+                    //   </SvgIcon>
+                    // )}
                   >
-                    Import
+                    Extract Excel
                   </Button>
                   <Button
+                  className="btn-gray"
                     color="inherit"
-                    startIcon={(
-                      <SvgIcon fontSize="small">
-                        <ArrowDownOnSquareIcon />
-                      </SvgIcon>
-                    )}
+                    href="/adddocument"
+                    // startIcon={(
+                    //   <SvgIcon fontSize="small">
+                    //     <ArrowDownOnSquareIcon />
+                    //   </SvgIcon>
+                    // )}
                   >
-                    Export
+        
+                        Add Document
+                   
                   </Button>
                 </Stack>
                 </Box>

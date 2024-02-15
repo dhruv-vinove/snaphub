@@ -86,7 +86,7 @@ margin: auto 0;
     text-align: center;
 }
 .dashboardtable tbody tr:nth-child(even) {
-    background: #f8f4fc;
+    background: #f5f7ff;
 }
 .btn-purple{
     background: #F6F8FF !important;
@@ -158,4 +158,57 @@ margin: auto 0;
         border-radius: 100%;
         padding: 8px;
        
+}
+
+.btn-white{
+    border: 1px solid #555150 !important;
+    color:  #1E1E1E !important;
+    background: white !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 21px !important;
+    border-radius: 5px !important;
+    height: 40px !important;
+}
+
+.btn-gray{
+    border: 1px solid #555150 !important;
+    color:  #FFFFFF !important;
+    background: #555150 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 21px !important;
+    border-radius: 5px !important;
+    height: 40px !important;
+}
+
+.MuiDateRangeCalendar-root:nth-child(2){
+    display: none !important;
+}
+.row-reverse{
+    flex-direction: row-reverse !important;
+}
+
+.bg-white{
+    background: #FFFFFF !important;
+}
+.search{
+    /* width: 301px; */
+    height: 39px;
+    padding: 0 !important;
+    border-radius: 8px !important;
+}
+.search ::placeholder{
+    color: #C3B3B3 !important;
+    font-size: 13px !important;
+    font-weight: 400  !important;
+}
+
+.search svg{
+    color: #191F2F;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: white !important;
+    box-shadow: white 0 0 0 2px !important;
 }
