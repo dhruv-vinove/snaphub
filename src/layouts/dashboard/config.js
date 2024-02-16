@@ -6,6 +6,7 @@ import UserIcon from '@heroicons/react/24/solid/UserIcon';
 import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
+import DocumentIcon from '@heroicons/react/24/solid/DocumentIcon';
 // import  ChatBubbleLeftRightIcon  from "@heroicons/24/solid/ChatBubbleLeftRightIcon";
 import { SvgIcon } from '@mui/material';
 
@@ -26,7 +27,7 @@ export const items = [
     path: '/managedocument',
     icon: (
       <SvgIcon fontSize="small">
-        <ChartBarIcon />
+        <DocumentIcon />
       </SvgIcon>
     )
   },
