@@ -212,3 +212,64 @@ margin: auto 0;
     border-color: white !important;
     box-shadow: white 0 0 0 2px !important;
 }
+
+.form{
+    label{
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #32404D !important;
+    }
+    fieldset {
+        border: 1px solid #E5E7EB !important;
+    }
+    .MuiOutlinedInput-notchedOutline{
+        border-color:#E5E7EB !important;
+        border-width: 2px !important;
+    }
+    textarea{
+        border-color:#E5E7EB !important;
+        border-width: 2px !important;
+        border-radius: 8px !important;
+
+
+            font: inherit;
+            letter-spacing: inherit;
+            color: currentColor;
+            padding: 4px 0 5px;
+            background: none;
+            margin: 0;
+            -webkit-tap-highlight-color: transparent;
+            display: block;
+            min-width: 0;
+            width: 100%;
+            -webkit-animation-name: mui-auto-fill-cancel;
+            animation-name: mui-auto-fill-cancel;
+            -webkit-animation-duration: 10ms;
+            animation-duration: 10ms;
+            padding: 16.5px 14px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+       
+    }
+    textarea:focus-visible {
+        outline: #E5E7EB auto 1px !important;
+    }
+    .image-div{
+        width: 143px;
+        height: 92px;
+        top: 47px;
+        border-radius: 5px;
+        border: 1px;
+        background: linear-gradient(0deg, #A5A8BE, #A5A8BE)linear-gradient(0deg, #FFFFFF, #FFFFFF);
+        border: 1px solid #A5A8BE;
+        display: flex;
+        image{
+            margin: auto;
+            height: 77px;
+            width: 77px;
+        }
+    }
+}
